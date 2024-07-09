@@ -7,3 +7,6 @@
 - npm run build-dev сборка для development
 - npm run build-prod  сборка для production
 - npm run clear  удаляет папку dist
+
+
+ Все команды отображены в  package.json - "scripts"

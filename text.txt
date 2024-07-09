@@ -1,0 +1,28 @@
+npm init --y  (Инициализируем проект -y Чтобы не отвечать на вопросы)
+
+npm i webpack -D  (Установка, приставка -D для разработки а не для прода)
+
+npm i webpack-cli webpack-dev-server -D ( CLI для управления, DEV_SERVER для запуска своего сервера а не со стороны )
+
+  "scripts": {
+    "start": "webpack serve", (запуск сервера)
+    "build-dev": "webpack", (режим разработки)
+    "build-prod": "webpack --node-env=production", (режим продакшина)
+    "clear": "rd /s /q dist" (очищение папки dist)
+    }
+npm install --save-dev html-webpack-plugin (HtmlWebpackPlugin упрощает создание HTML-файлов для обслуживания ваших пакетов webpack)
+импорт const HtmlWebpackPlugin = require('html-webpack-plugin'); 
+
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, 'src', 'index.html'),
+        }),
+    ],
+        
+npm install --save-dev html-loader 
+npm install --save-dev style-loader
+npm install --save-dev css-loader
+npm install --save-dev mini-css-extract-plugin
+npm install sass-loader sass -D 
+npm install --save-dev postcss-loader postcss postcss-preset-env
+npm install -D babel-loader @babel/core @babel/preset-env
